@@ -1,0 +1,8 @@
+dependencies {
+    implementation project(':blog-search-domain')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+tasks.named('bootJar') {
+    enabled = true
+}

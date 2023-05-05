@@ -1,13 +1,12 @@
-package com.sample.blogsearch;
+package com.sample.blogsearch.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BlogSearchApplication {
+public class BlogSearchApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BlogSearchApplication.class, args);
+        SpringApplication.run(BlogSearchApiApplication.class, args);
     }
-
 }
