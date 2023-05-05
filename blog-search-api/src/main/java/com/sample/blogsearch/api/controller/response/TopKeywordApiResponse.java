@@ -12,7 +12,7 @@ public record TopKeywordApiResponse(
     public static TopKeywordApiResponse fromDto(SearchKeywordDto searchKeywordDto) {
         return new TopKeywordApiResponse(
                 searchKeywordDto.keyword(),
-                searchKeywordDto.searchCnt()
+                searchKeywordDto.searchedCnt()
         );
     }
 

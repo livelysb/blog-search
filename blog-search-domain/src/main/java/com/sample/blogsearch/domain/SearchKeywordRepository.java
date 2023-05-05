@@ -9,5 +9,5 @@ public interface SearchKeywordRepository extends JpaRepository<SearchKeyword, Lo
 
     SearchKeyword findByKeyword(String keyword);
 
-    List<SearchKeyword> findTop10ByOrderBySearchCntDesc();
+    List<SearchKeyword> findTop10ByOrderBySearchedCntDesc();
 }

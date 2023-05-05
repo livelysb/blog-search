@@ -18,14 +18,14 @@ public class SearchKeywordService {
     SearchKeywordRepository searchKeywordRepository;
 
     @Transactional
-    public void increaseSearchCnt(String keyword, long searchCnt) {
+    public void increaseSearchedCnt(String keyword, long searchedCnt) {
         SearchKeyword searchKeyword = Optional.ofNullable(searchKeywordRepository.findByKeyword(keyword)).orElse(new SearchKeyword(keyword));
-        searchKeyword.increaseSearchCnt(searchCnt);
+        searchKeyword.increaseSearchedCnt(searchedCnt);
         searchKeywordRepository.save(searchKeyword);
     }
 
     @Transactional
     public List<SearchKeywordDto> getTopKeywords() {
-        return searchKeywordRepository.findTop10ByOrderBySearchCntDesc().stream().map(SearchKeywordDto::fromEntity).toList();
+        return searchKeywordRepository.findTop10ByOrderBySearchedCntDesc().stream().map(SearchKeywordDto::fromEntity).toList();
     }
 }

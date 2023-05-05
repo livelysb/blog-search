@@ -27,7 +27,7 @@ public class BlogSearchController {
     public BlogSearchApiResponse searchBlog(
             @Valid @ModelAttribute BlogSearchApiRequest blogSearchApiRequest
     ) {
-        searchKeywordService.increaseSearchCnt(blogSearchApiRequest.query(), 1L);
+        searchKeywordService.increaseSearchedCnt(blogSearchApiRequest.query(), 1L);
         return null;
     }
 

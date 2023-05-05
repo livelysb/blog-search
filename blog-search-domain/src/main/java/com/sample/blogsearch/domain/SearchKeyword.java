@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(
         indexes = {
-                @Index(name = "idx_search_cnt", columnList = "searchCnt DESC"),
+                @Index(name = "idx_search_cnt", columnList = "searchedCnt DESC"),
                 @Index(name = "udx_keyword", columnList = "keyword", unique = true)
         }
 )
@@ -21,13 +21,13 @@ public class SearchKeyword {
 
     private String keyword;
 
-    private long searchCnt;
+    private long searchedCnt;
 
     public SearchKeyword(String keyword) {
         this.keyword = keyword;
     }
 
-    public void increaseSearchCnt(long searchCnt) {
-        this.searchCnt += searchCnt;
+    public void increaseSearchedCnt(long searchedCnt) {
+        this.searchedCnt += searchedCnt;
     }
 }
